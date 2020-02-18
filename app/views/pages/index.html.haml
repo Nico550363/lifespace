@@ -1,0 +1,39 @@
+%body
+  .wrapper{:style => "text-align: center;"}
+    %header.header
+      %input.search__input{:placeholder => "search"}/
+      - if user_signed_in?
+        %input.button.button-clear{:action => "/pages", :method => "get", :type => "submit", :value => "投稿"}/
+      - else
+        %input.button.button-clear/
+        = link_to "ログイン", new_user_session_path, class: 'button button-clear'
+        = link_to "新規登録", new_user_registration_path, class: 'button button-clear'
+    .main
+      %h1 life space
+      %p 〜生活スタイル口コミサイト〜
+      %form{:action => "#", :method => "POST", :style => "width: 300px; margin: auto;"}
+        %select{:name => "style"}
+          %optgroup{:label => "ジャンルを選択して下さい"}
+            %option{:value => "all"} 全て選択
+            %option{:value => "change"} 模様替え
+            %option{:value => "water"} 水まわり
+            %option{:value => "cloth"} クローゼット
+            %option{:value => "hundred"} 100均
+    .article{:style => "margin: 40px 40px;"}
+      %p 新着
+      - @pages.each do |page|
+        .contents.row
+          .content_title
+            =page.name
+          .content_comment
+            =page.text
+          .content_image
+            = image_tag page.image.url, size: '130x150'
+            -# = image_tag page[0].image.url, size: '185x150'
+      %a.button{:href => "#"} 全て見る
+      %p オススメ（急上昇）
+      %button{:onclick => "location.href='#'"} 全て見る
+    .footer
+      %button.button.button-outline{:href => "#"} 利用規約
+      %button.button.button-outline{:href => "#"} プライバシーポリシー
+      %button.button.button-outline{:href => "#"} お問い合わせ
