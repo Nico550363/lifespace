@@ -1,47 +1,49 @@
-// Place all the styles related to the pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.wrapper{
+  text-align: center;
+  background: -moz-linear-gradient(#ffb03c, #ff708d);
+  background: -webkit-linear-gradient(#ffb03c, #ff708d);
+  background: linear-gradient(to right, #ffb03c, #ff708d);
+  color: #FFF;
+}
 
-// .formcreate{
-//   width: 600px;
-// }
+.select-box{
+  width: 300px; 
+  margin: auto;
+}
 
-
-
-
-
-
-// .header {
-//   height: 60px;
-//   width: 100%;
-//   display: flex;
-//   // float: right;
-//   text-align: right;
-
-// }
-// .new-account {
-//   margin-left: 10px;
-//   margin-right: 10px;
-// }
-// .ro {
-//   margin-left: 10px;
-//   margin-right: 10px;
-// }
-
-// .main {
-//   height: 600px;
-//   text-align: center;
-//   background-color: aqua;
-// }
-
-// .article {
-//   height: 100%;
-// }
-
-// .footer {
-//   height: 60px;
-//   &__button {
-//     display: flex;
-//   }
-// }
-
+.article{
+  margin: 40px 40px;
+}
+.contents{
+  padding: 42px 0px 100px;
+  &__box{
+    display: flex;
+  }
+  &__smallbox{
+    list-style: none;
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #FFF;
+    background: #9b4dca;
+    border-bottom: solid 6px #672b8a;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+  }
+  &__title{
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 768px){
+  .article {
+    max-width: 700px;
+    padding: 0px;
+    margin: auto;
+  }
+  .contents {
+    &__smallbox {
+      width: 25%;
+      padding: 10px;
+      margin-right: 5px;
+    }
+  }
+}
