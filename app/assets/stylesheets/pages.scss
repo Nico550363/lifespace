@@ -1,6 +1,9 @@
 .wrapper{
   text-align: center;
-  background-color: #ddc9e9
+  background: -moz-linear-gradient(#ffb03c, #ff708d);
+  background: -webkit-linear-gradient(#ffb03c, #ff708d);
+  background: linear-gradient(to right, #ffb03c, #ff708d);
+  color: #FFF;
 }
 
 .select-box{
