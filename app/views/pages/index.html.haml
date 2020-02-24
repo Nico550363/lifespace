@@ -25,12 +25,10 @@
       .contents__box
         - @pages.each do |page|
           %ul.contents__smallbox
-            %li.content_title
-              =page.name
-            %li.content_comment
-              =page.text
             %li.content_image
               = image_tag page.image.url, size: '130x150'
+            %li.content_title
+              =page.name
       %a.button{:href => "#"} 全て見る
       %p オススメ（急上昇）
       %button{:onclick => "location.href='#'"} 全て見る
