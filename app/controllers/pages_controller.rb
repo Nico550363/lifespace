@@ -2,8 +2,6 @@ class PagesController < ApplicationController
 
   # before_action :move_to_index, except: :index
 
-  # protect_from_forgery with: :null_session
-
   def index
     @pages = Page.limit(4).order('created_at DESC')
   end
