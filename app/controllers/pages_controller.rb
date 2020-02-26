@@ -1,8 +1,6 @@
 class PagesController < ApplicationController
 
-  # before_action :move_to_index, except: :index
-
-  # protect_from_forgery with: :null_session
+  before_action :move_to_index, except: :index
 
   def index
     @pages = Page.limit(4).order('created_at DESC')
@@ -13,7 +11,7 @@ class PagesController < ApplicationController
   end
   
   def create
-    Page.create(page_params)
+    Page.create(name: page_params[:name], image: page_params[:image], text: page_params[:text], user_id: current_user.id)
   end
 
   private
@@ -21,7 +19,7 @@ class PagesController < ApplicationController
     params.require(:page).permit(:name, :text, :image)
   end
   
-  # def move_to_index
-  #   redirect_to action: :index unless user_signed_in?
-  # end
+  def move_to_index
+    redirect_to action: :index unless user_signed_in?
+  end
 end
