@@ -1,8 +1,14 @@
-.contents.row
-  %p
-    = @nickname
-    さんの投稿一覧
-  - @pages.each do |page|
-    .content_image
-      = image_tag page.image.url, size: '130x150'
-      %span.name= page.name
+.wrapper
+  .header
+    = render "pages/header"
+  .contents.row
+    %p
+      = @nickname
+      さんの投稿一覧
+    - @pages.each do |page|
+      .content_image
+        = image_tag page.image.url, size: '130x150'
+        %span.name= page.name
+        = link_to '削除', "/pages/#{page.id}", method: :delete, class: 'button button-clear'
+  .footer
+    = render "pages/footer"
