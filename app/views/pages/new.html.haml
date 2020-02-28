@@ -25,11 +25,11 @@
                   = f.text_area :text, class: "formcreate" , placeholder: "コメントを入力してください"
                 .form-box
                   %label.sell-main__sample
-                    = f.fields_for :images do |i|
-                      = i.file_field :image
-                    ドラッグアンドドロップ
-                    またはクリックしたファイルをアップロード
-                  -# = f.file_field :image
+                    -# = f.fields_for :images do |i|
+                    -#   = i.file_field :image
+                    -# ドラッグアンドドロップ
+                    -# またはクリックしたファイルをアップロード
+                  = f.file_field :image
                 .form-box__button
                   = f.submit 'send', class: "button-primary", style: "margin-top: 20px;width: -webkit-fill-available;height: auto;"
                   %input.button-primary{:style => "color: gray;margin-top: 20px;width: -webkit-fill-available;height: auto;",}
