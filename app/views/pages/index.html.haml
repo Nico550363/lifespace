@@ -3,8 +3,9 @@
     %input.search__input{:placeholder => "search"}/
     - if user_signed_in?
       %input.button.button-clear/
-      = link_to "ログアウト", "#", class: 'button button-clear'
+　　　 = link_to "ログアウト", "#", class: 'button button-clear'
       = link_to "投稿する", pages_new_path, class: 'button button-clear'
+      %a{:href => "/users/#{current_user.id}"} マイページ
       -# %input.button.button-clear{:action => "/pages", :method => "get", :type => "submit", :value => "投稿"}/
     - else
       %input.button.button-clear/

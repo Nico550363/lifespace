@@ -11,7 +11,7 @@ class PagesController < ApplicationController
   end
   
   def create
-    Page.create(page_params)
+    Page.create(name: page_params[:name], image: page_params[:image], text: page_params[:text], user_id: current_user.id)
   end
 
   private
