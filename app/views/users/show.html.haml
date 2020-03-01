@@ -12,5 +12,6 @@
       .content_image
         = image_tag page.image.url, size: '300x275'
         = link_to '削除', "/pages/#{page.id}", method: :delete, class: 'button button-clear'
+        = link_to '編集', "/pages/#{page.id}/edit", method: :get, class: 'button button-clear'
   .footer
     = render "pages/footer"
