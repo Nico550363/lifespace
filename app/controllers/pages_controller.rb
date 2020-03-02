@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 
-  before_action :move_to_index, except: :index
+  before_action :move_to_index, except: [:index, :show]
 
   def index
     @pages = Page.limit(4).order('created_at DESC')
@@ -17,6 +17,10 @@ class PagesController < ApplicationController
   def destroy
     page = Page.find(params[:id])
     page.destroy if page.user_id == current_user.id
+  end
+
+  def show
+    @page = Page.find(params[:id])
   end
 
   private

@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   get     'pages/new'  =>  'pages#new' 
   post    'pages'      =>  'pages#create'
   delete  'pages/:id'  =>  'pages#destroy'
-get       'users/:id'   =>  'users#show'
+  get     'users/:id'  =>  'users#show'
+  get     'pages/:id'  =>  'pages#show'
 end

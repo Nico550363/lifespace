@@ -1,0 +1,12 @@
+.wrapper
+  .header
+    = render "pages/header"
+  .contents.row
+    .content__name
+      = @page.name
+    .content__text
+      = @page.text
+    .content_image
+      = image_tag @page.image.url, size: '300x275'
+  .footer
+    = render "pages/footer"
