@@ -1,0 +1,18 @@
+.create-container{
+  width: 80%;
+  margin: auto;
+}
+.create-header{
+  text-align: center;
+}
+.create-main{
+  &__sample{
+    display:block;
+    border-style: dashed;
+    text-align: center;
+    height: 160px;
+    input{
+      display: none;
+    }
+  }
+}

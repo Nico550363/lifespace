@@ -1,6 +1,8 @@
 .wrapper
   .header
     = render "pages/header"
+  .header-title
+    = render "pages/header-title"
   .contents.row
     -# %p
     -#   = @nickname
@@ -12,5 +14,28 @@
       .content_image
         = image_tag page.image.url, size: '300x275'
         = link_to '削除', "/pages/#{page.id}", method: :delete, class: 'button button-clear'
+  %table
+    %tr
+      %th 無料プラン
+      %th.popular
+        %span.inner
+          %span.no1> 人気No.1
+          初級プラン
+      %th 上級プラン
+    %tr
+      %td ¥0
+      %td.popular ¥5,000
+      %td ¥8,000
+    %tr
+      %td
+        %a{:href => "#"} 申し込み
+      %td
+        %a{:href => "#"} 申し込み
+      %td
+        %a{:href => "#"} 申し込み
+    %tr
+      %td 保証なし
+      %td.popular 保証1ヶ月
+      %td 保証3ヶ月
   .footer
     = render "pages/footer"
