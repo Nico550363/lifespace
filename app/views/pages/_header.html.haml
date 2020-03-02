@@ -2,7 +2,7 @@
 - if user_signed_in?
   %input.button.button-clear/
   = link_to "ログアウト", "#", class: 'button button-clear'
-  = link_to "投稿する", pages_new_path, class: 'button button-clear'
+  = link_to "投稿する", pages_path, class: 'button button-clear'
   = link_to "マイページ", "/users/#{current_user.id}", class: 'button button-clear'
   -# %input.button.button-clear{:action => "/pages", :method => "get", :type => "submit", :value => "投稿"}/
 - else
