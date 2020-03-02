@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#index'
-  get     'pages'      =>  'pages#index'
-  get     'pages/new'  =>  'pages#new' 
-  post    'pages'      =>  'pages#create'
-  delete  'pages/:id'  =>  'pages#destroy'
-  get     'users/:id'  =>  'users#show'
-  get     'pages/:id'  =>  'pages#show'
+  resources :pages do
+    resources :comments, only: [:create]
+  end
+  resources :users, only: [:show]
 end
