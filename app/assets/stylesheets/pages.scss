@@ -1,11 +1,35 @@
 .wrapper{
-  text-align: center;
-  background: -moz-linear-gradient(#ffb03c, #ff708d);
-  background: -webkit-linear-gradient(#ffb03c, #ff708d);
-  background: linear-gradient(to right, #ffb03c, #ff708d);
-  color: #FFF;
+  // text-align: center;
+  // background: -moz-linear-gradient(#ffb03c, #ff708d);
+  // background: -webkit-linear-gradient(#ffb03c, #ff708d);
+  // background: linear-gradient(to right, #ffb03c, #ff708d);
+  // color: #FFF;
   height: 100%;
   // あとで高さは修正する
+}
+.header{
+  // background-color: ghostwhite;
+  width: 80%;
+  height: 64px;
+  margin: auto;
+  &__left{
+    float: left;
+  }
+  &__right{
+    float: right;
+  }
+  &-title{
+    text-align: center;
+  }
+}
+
+.button-black {
+    background-color: black;
+    border-color: black;
+}
+
+.footer{
+  text-align: center;
 }
 
 .select-box{
@@ -15,6 +39,7 @@
 
 .article{
   margin: 40px 40px;
+  text-align: center;
 }
 .contents{
   padding: 42px 0px 100px;
