@@ -14,12 +14,8 @@
                   = f.text_field :name, class: "formcreate", placeholder: "名前を入力してください" 
                 .form-box
                   %label{:for => "ageRangeField"} style
-                  %select#ageRangeField.formcreate{:placeholder => "ジャンルを選択してください", :type => "text"}
-                    %option{:value => "example"} ジャンルを選択してください
-                    %option{:value => "change"} 模様替え
-                    %option{:value => "water"} 水まわり
-                    %option{:value => "cloth"} クローゼット
-                    %option{:value => "hundred"} 100均
+                  .select
+                    = f.select :style, ["模様替え", "水周り", "クローゼット", "100均"], {include_blank: "--"}, class: "sell-main__select-default"
                 .form-box
                   %label{:for => "commentField"} Comment
                   = f.text_area :text, class: "formcreate" , placeholder: "コメントを入力してください"

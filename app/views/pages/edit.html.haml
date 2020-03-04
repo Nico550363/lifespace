@@ -4,7 +4,7 @@
       編集する
     %input{:autofocus => "true", :name => "style", :placeholder => "style", :type => "text", :value => @page.style}/
     %input{:autofocus => "true", :name => "name", :placeholder => "name", :type => "string", :value => @page.name}/
-    %input{:autofocus => "true", :name => "image", :placeholder => "Image Url", :type => "text", :value => @page.image}/
+    -# %input{:autofocus => "true", :name => "image", :placeholder => "Image Url", :type => "file", :value => @page.image.url}/
     %textarea{:cols => "30", :name => "text", :placeholder => "text", :rows => "10"}= @page.text
     %input{:type => "submit", :value => "SENT"}/
 
@@ -14,4 +14,4 @@
 -#   %label{:for => "commentField"} Comment
 -#   = f.text_area :text, class: "formcreate" , placeholder: "コメントを入力してください"
 -#   = f.file_field :image
--#   = f.submit 'send', class: "button-primary"
+-#   = f.submit 'send', class: "button-primary" 
