@@ -24,11 +24,15 @@
               .form-box
                 %label{:for => "commentField"} Comment
                 = f.text_area :text, class: "formcreate" , placeholder: "コメントを入力してください"
-              .form-box
-                %label.create-main__sample
-                  = f.file_field :image
-                  ドラッグアンドドロップ
-                  またはクリックしたファイルをアップロード
+              .field.image
+                = f.label 'クリックしてファイルをアップロード', class: "create-main__sample"
+                #img_field{:onclick => "$('#file').click()"}
+                  - if @page.image.url.present?
+                    = image_tag(@page.image.url)
+                  - else
+                    %i.fas.fa-image
+                    %i.fas.fa-file-upload.add
+                = f.file_field :image, class: "image", style: "display:none;", id: "file"
               .form-box__button
                 = f.submit 'send', class: "button-primary"
                 = link_to 'back', root_path, class: "button button-black"
