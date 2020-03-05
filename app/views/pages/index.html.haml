@@ -1,12 +1,17 @@
 .wrapper
   .header
     = render "pages/header"
+  .header-title
+    = render "pages/header-title"
   .main
     = render "pages/main"
   .article
     .contents
-      .contents__new
-        新着
+      %pre
+        %code
+          :preserve
+          .contents__new
+            新着
       .contents__box
         - @pages.each do |page|
           %ul.contents__smallbox
@@ -16,7 +21,11 @@
               %li.content_title
                 =page.name
       %a.button{:href => "#"} 全て見る
-      %p オススメ（急上昇）
+      %pre
+        %code
+          :preserve
+          .content__new
+            オススメ（急上昇）
       %a.button{:href => "#"} 全て見る
   .footer
     = render "pages/footer"

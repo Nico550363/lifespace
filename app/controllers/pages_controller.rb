@@ -11,7 +11,7 @@ class PagesController < ApplicationController
   end
   
   def create
-    Page.create(name: page_params[:name], image: page_params[:image], text: page_params[:text], user_id: current_user.id)
+    @page = Page.create(name: page_params[:name], image: page_params[:image], text: page_params[:text], style: page_params[:style], user_id: current_user.id)
   end
 
   def destroy
@@ -22,11 +22,24 @@ class PagesController < ApplicationController
   def show
     @page = Page.find(params[:id])
     @comments = @page.comments.includes(:user)
+  def edit
+    @page = Page.find(params[:id])
+  end
+
+  def update
+    page = Page.find(params[:id])
+    if page.user_id == current_user.id
+      page.update(update_page_params)
+    end
   end
 
   private
   def page_params
-    params.require(:page).permit(:name, :text, :image)
+    params.require(:page).permit(:name, :text, :image, :style)
+  end
+
+  def update_page_params
+    params.permit(:name, :text, :image, :style)
   end
   
   def move_to_index
