@@ -15,17 +15,12 @@
                 = f.text_field :name, class: "formcreate", placeholder: "名前を入力してください" 
               .form-box
                 %label{:for => "ageRangeField"} style
-                %select#ageRangeField.formcreate{:placeholder => "ジャンルを選択してください", :type => "text"}
-                  %option{:value => "example"} ジャンルを選択してください
-                  %option{:value => "change"} 模様替え
-                  %option{:value => "water"} 水まわり
-                  %option{:value => "cloth"} クローゼット
-                  %option{:value => "hundred"} 100均
+                = f.select :style, ['模様替え', '水まわり', 'クローゼット', '100均'], {include_blank: '--'}, class: 'formcreate'
               .form-box
                 %label{:for => "commentField"} Comment
                 = f.text_area :text, class: "formcreate" , placeholder: "コメントを入力してください"
               .field.image
-                = f.label 'クリックしてファイルをアップロード', class: "create-main__sample"
+                = f.label 'image', class: "create-main__label"
                 #img_field{:onclick => "$('#file').click()"}
                   - if @page.image.url.present?
                     = image_tag(@page.image.url)
