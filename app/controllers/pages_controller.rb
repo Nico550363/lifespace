@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 
-  before_action :move_to_index, except: :index
+  before_action :move_to_index, except: [:index, :show]
 
   def index
     @pages = Page.limit(4).order('created_at DESC')
@@ -19,6 +19,9 @@ class PagesController < ApplicationController
     page.destroy if page.user_id == current_user.id
   end
 
+  def show
+    @page = Page.find(params[:id])
+    @comments = @page.comments.includes(:user)
   def edit
     @page = Page.find(params[:id])
   end
