@@ -22,6 +22,8 @@ class PagesController < ApplicationController
   def show
     @page = Page.find(params[:id])
     @comments = @page.comments.includes(:user)
+  end
+  
   def edit
     @page = Page.find(params[:id])
   end
