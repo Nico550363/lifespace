@@ -2,11 +2,9 @@
   %input.search__input{:placeholder => "search"}/
 .header__right
   - if user_signed_in?
-    -# %input.button.button-clear/
     = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'button button-clear'
     = link_to "投稿する", new_page_path, class: 'button button-clear'
     = link_to "マイページ", "/users/#{current_user.id}", class: 'button button-clear'
-    -# %input.button.button-clear{:action => "/pages", :method => "get", :type => "submit", :value => "投稿"}/
   - else
     %input.button.button-clear/
     = link_to "ログイン", new_user_session_path, class: 'button button-clear'
