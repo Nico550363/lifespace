@@ -66,3 +66,4 @@ gem 'erb2haml'
 gem 'carrierwave'
 gem 'devise'
 gem "pry-rails"
+gem 'font-awesome-sass', '~> 5.4.1'
