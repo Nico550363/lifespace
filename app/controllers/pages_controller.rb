@@ -34,6 +34,7 @@ class PagesController < ApplicationController
       page.update(update_page_params)
     end
   end
+  
 
   private
   def page_params
