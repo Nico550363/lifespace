@@ -1,0 +1,21 @@
+.search{
+  margin: 40px 40px;
+  text-align: center;
+}
+
+.header-search-form{
+  background-color: rgb(245, 245, 245);
+  width: 100%;
+  &-top{
+    border-radius: 4px 0px 0px 4px;
+  }
+  &__btn{
+    position: absolute;
+    width: 40px;
+    -webkit-appearance: none;
+    border-width: initial;
+    border-style: none;
+    border-radius: 0px 4px 4px 0px;
+    padding: 0px;
+  }
+}

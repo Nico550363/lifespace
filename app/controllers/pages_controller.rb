@@ -35,6 +35,10 @@ class PagesController < ApplicationController
     end
   end
 
+  def search
+    @pages = Page.search(params[:search])
+  end
+  
   private
   def page_params
     params.require(:page).permit(:name, :text, :image, :style)
@@ -47,4 +51,5 @@ class PagesController < ApplicationController
   def move_to_index
     redirect_to action: :index unless user_signed_in?
   end
+  
 end

@@ -1,0 +1,21 @@
+.wrapper
+  .header
+    = render "pages/header"
+  .header-title
+    = render "pages/header-title"
+  .article
+    .contents
+      %pre
+        %code
+          :preserve
+          .search-box__title 検索結果
+      .contents__box
+        - @pages.each do |page|
+          %ul.contents__smallbox
+            = link_to "/pages/#{page.id}", method: :get do
+              %li.content_image
+                = image_tag page.image.url, size: '130x150'
+              %li.content_title
+                =page.name
+  .footer
+    = render "pages/footer"
