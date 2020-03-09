@@ -6,8 +6,8 @@
 .header-search-form{
   background-color: rgb(245, 245, 245);
   width: 100%;
-  &-top{
-    border-radius: 4px 0px 0px 4px;
+  &__top{
+    border-radius: 4px 0px 0px 4px!important;
   }
   &__btn{
     position: absolute;
