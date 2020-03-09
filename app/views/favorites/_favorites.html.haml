@@ -1,0 +1,20 @@
+- if user_signed_in?
+  - if page.favorite_user(current_user.id)
+    .item-button-container__left__disfavorite
+      =link_to user_page_favorite_path(current_user, page, favorite), method: "DELETE", remote: true do
+        %i.fas.fa-heart
+        %span いいね！
+        %span 
+          = page.favorites_count
+  - else
+    .item-button-container__left__favorite
+      =link_to user_page_favorites_path(current_user, page), method: "POST", remote: true do
+        %i.fas.fa-heart
+        %span いいね！
+        %span
+          = page.favorites_count
+-else
+  .item-button-container__left__favorite
+    %i.fas.fa-heart
+      %span いいね！
+      %span = page.favorite_count

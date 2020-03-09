@@ -1,13 +1,18 @@
 class FavoritesController < ApplicationController
   def create
-    @favorite = current_user.favorites.create(page_id: params[:page_id])
-    @page = Page.find(params[:page_id])
-    render 'index.js.haml'
+    @favorite = Favorite.create(user_id: current_user.id, page_id: params[:page_id])
+    @favorites = Favorite.where(page_id: params[:page_id])
+    get_page
   end
-  
+
   def destroy
-    @favorite = current_user.favorites.find_by(page_id: params[:id].to_i).destroy
-    @page = Page.find(params[:id])
-    render 'index.js.haml'
+    @favorite = Favorite.find_by(user_id: current_user.id, page_id: params[:page_id])
+    @favorite.destroy
+    @favorites = Favorite.where(page_id: params[:page_id])
+    get_page
+  end
+
+  def get_page
+    @page = Page.find(params[:page_id])
   end
 end
