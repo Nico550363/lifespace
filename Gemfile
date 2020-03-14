@@ -72,9 +72,15 @@ group :production do
   gem 'unicorn', '5.4.1'
 end
 
+#haml記法で
 gem 'haml-rails'
 gem 'erb2haml'
+
+#画像をアップロードを行うためのgem
 gem 'carrierwave'
+gem 'fog-aws'
+
+
 gem 'devise'
 gem "pry-rails"
 gem 'font-awesome-sass', '~> 5.4.1'
