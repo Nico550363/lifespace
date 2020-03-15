@@ -4,8 +4,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   # include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  # storage :file
-  
+
    #development.testの場合はfileでそれ以外はfogという書き方をしています。
   if Rails.env.development? || Rails.env.test? 
     storage :file
