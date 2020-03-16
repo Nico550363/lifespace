@@ -79,6 +79,7 @@ gem 'erb2haml'
 #画像をアップロードを行うためのgem
 gem 'carrierwave'
 gem 'fog-aws'
+gem 'mini_magick'
 
 
 gem 'devise'
