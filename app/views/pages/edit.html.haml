@@ -3,14 +3,9 @@
     = render "pages/header"
   .header-title
     = render "pages/header-title"
-.contents.mannaka
-  = form_tag("/pages/#{@page.id}", method: :patch ) do
-    %h3
-      編集する
-    %input{:autofocus => "true", :name => "style", :placeholder => "style", :type => "text", :value => @page.style}/
-    %input{:autofocus => "true", :name => "name", :placeholder => "name", :type => "string", :value => @page.name}/
-    -# %input{:autofocus => "true", :name => "image", :placeholder => "Image Url", :type => "file", :value => @page.image.url}/
-    %textarea{:cols => "30", :name => "text", :placeholder => "text", :rows => "10"}= @page.text
-    %input{:type => "submit", :value => "SENT"}/
+  .create-container
+    %header.create-header
+    %main.create-main
+      = render 'form', page: @page
   .footer
     = render "pages/footer"

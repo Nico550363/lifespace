@@ -32,6 +32,8 @@ class PagesController < ApplicationController
     page = Page.find(params[:id])
     if page.user_id == current_user.id
       page.update(update_page_params)
+    else
+      render :edit
     end
   end
 
@@ -45,7 +47,7 @@ class PagesController < ApplicationController
   end
 
   def update_page_params
-    params.permit(:name, :text, :image, :style)
+    params.require(:page).permit(:name, :text, :image, :style)
   end
   
   def move_to_index
