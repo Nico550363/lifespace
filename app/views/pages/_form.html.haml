@@ -1,0 +1,24 @@
+= form_with model: @page, local: true do |f|
+  %section.create-main__container
+    %fieldset
+      .form-box
+        %label{:for => "nameField"} Name
+        = f.text_field :name, class: "formcreate", placeholder: "名前を入力してください" 
+      .form-box
+        %label{:for => "ageRangeField"} style
+        = f.select :style, ['模様替え', '水まわり', 'クローゼット', '100均'], {include_blank: '--'}, class: 'formcreate'
+      .form-box
+        %label{:for => "commentField"} Comment
+        = f.text_area :text, class: "formcreate" , placeholder: "コメントを入力してください"
+      .field.image
+        = f.label 'image', class: "create-main__label"
+        #img_field{:onclick => "$('#file').click()"}
+          - if @page.image.url.present?
+            = image_tag(@page.image.url)
+          - else
+            %i.fas.fa-image
+            %i.fas.fa-file-upload.add
+        = f.file_field :image, class: "image", style: "display:none;", id: "file"
+      .form-box__button
+        = f.submit 'send', class: "button-primary"
+        = link_to 'back', root_path, class: "button button-black"

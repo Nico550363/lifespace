@@ -1,16 +1,52 @@
+-# .wrapper
+-#   .header
+-#     = render "pages/header"
+-#   .header-title
+-#     = render "pages/header-title"
+-# .contents.mannaka
+-#   = form_tag("/pages/#{@page.id}", method: :patch ) do
+-#     %h3
+-#       編集する
+-#     %input{:autofocus => "true", :name => "style", :placeholder => "style", :type => "text", :value => @page.style}/
+-#     %input{:autofocus => "true", :name => "name", :placeholder => "name", :type => "string", :value => @page.name}/
+-#     -# %input{:autofocus => "true", :name => "image", :placeholder => "Image Url", :type => "file", :value => @page.image.url}/
+-#     %textarea{:cols => "30", :name => "text", :placeholder => "text", :rows => "10"}= @page.text
+-#     %input{:type => "submit", :value => "SENT"}/
+-#   .footer
+-#     = render "pages/footer"
+
 .wrapper
   .header
     = render "pages/header"
   .header-title
     = render "pages/header-title"
-.contents.mannaka
-  = form_tag("/pages/#{@page.id}", method: :patch ) do
-    %h3
-      編集する
-    %input{:autofocus => "true", :name => "style", :placeholder => "style", :type => "text", :value => @page.style}/
-    %input{:autofocus => "true", :name => "name", :placeholder => "name", :type => "string", :value => @page.name}/
-    -# %input{:autofocus => "true", :name => "image", :placeholder => "Image Url", :type => "file", :value => @page.image.url}/
-    %textarea{:cols => "30", :name => "text", :placeholder => "text", :rows => "10"}= @page.text
-    %input{:type => "submit", :value => "SENT"}/
+  .create-container
+    %header.create-header
+    %main.create-main
+      = form_with model: @page, local: true do |f|
+        %section.create-main__container
+          %fieldset
+            .form-box
+              %label{:for => "nameField"} Name
+              = f.text_field :name, class: "formcreate", placeholder: "名前を入力してください" 
+            .form-box
+              %label{:for => "ageRangeField"} style
+              = f.select :style, ['模様替え', '水まわり', 'クローゼット', '100均'], {include_blank: '--'}, class: 'formcreate'
+            .form-box
+              %label{:for => "commentField"} Comment
+              = f.text_area :text, class: "formcreate" , placeholder: "コメントを入力してください"
+            .field.image
+              = f.label 'image', class: "create-main__label"
+              #img_field{:onclick => "$('#file').click()"}
+                - if @page.image.url.present?
+                  = image_tag(@page.image.url)
+                - else
+                  %i.fas.fa-image
+                  %i.fas.fa-file-upload.add
+              = f.file_field :image, class: "image", style: "display:none;", id: "file"
+            .form-box__button
+              = f.hidden_field :id
+              = f.submit 'send', class: "button-primary"
+              = link_to 'back', root_path, class: "button button-black"
   .footer
     = render "pages/footer"
