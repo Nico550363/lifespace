@@ -76,7 +76,7 @@ end
 gem 'haml-rails'
 gem 'erb2haml'
 
-#画像をアップロードを行うためのgem
+#本番環境用、画像をアップロードを行うためのgem
 gem 'carrierwave'
 gem 'fog-aws'
 gem 'mini_magick'
