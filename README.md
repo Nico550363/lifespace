@@ -1,5 +1,22 @@
 # README
 
+* アプリ名: liffespace
+
+* アドレス: http://3.113.231.107/
+
+* 使い方: 
+1, ヘッダーの右上に新規登録のボタンでアカウント登録する。
+
+2, ヘッダーの右上の投稿ボタンをクリックする。
+
+3, 投稿ページに名前,ジャンル,説明,画像を入力し、投稿ボタンをクリックする。
+
+4, トップページに投稿作品が拝見できます。
+
+その他: マイページ、編集機能、コメント機能がついています。
+
+* : 
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
