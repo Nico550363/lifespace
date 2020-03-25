@@ -37,6 +37,10 @@ class PagesController < ApplicationController
     end
   end
 
+  def all
+    @pages = Page.all
+  end
+
   def search
     @pages = Page.search(params[:search])
   end

@@ -45,6 +45,8 @@
   padding: 42px 0px 100px;
   &__box{
     display: flex;
+    width: 100%;
+    flex-wrap: wrap;
   }
   &__smallbox{
     list-style: none;
@@ -70,7 +72,7 @@
     &__smallbox {
       width: 25%;
       padding: 10px;
-      margin-right: 5px;
+      // margin-right: 5px;
     }
   }
 }

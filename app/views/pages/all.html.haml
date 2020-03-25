@@ -20,12 +20,5 @@
                 = image_tag page.image.url, size: '130x150'
               %li.content_title
                 =page.name
-      %a.button{:href => "/all"} 全て見る
-      %pre
-        %code
-          :preserve
-          .content__new
-            オススメ（急上昇）
-      %a.button{:href => "#"} 全て見る
   .footer
     = render "pages/footer"

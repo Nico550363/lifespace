@@ -1,11 +1,15 @@
 # README
 
-## lifespace
-生活についての情報を共有するアプリケーション  
+## 概要
+アプリケーション名: lifespace  
+* 生活についての情報を共有するアプリケーション  
+
 アドレス: http://3.113.231.107/
+
 
 ## 使用言語
 haml, sass, javascript, ruby, ruby on rails
+
 
 ## 使い方
 1. ヘッダーの右上に新規登録のボタンでアカウント登録する。  
@@ -16,7 +20,7 @@ haml, sass, javascript, ruby, ruby on rails
 
 4. トップページに投稿作品が拝見できます。  
 
-その他: マイページ、編集機能、コメント機能がついています。
+* その他: マイページ、編集機能、コメント機能がついています。
 
 
 <!-- This README would normally document whatever steps are necessary to get the

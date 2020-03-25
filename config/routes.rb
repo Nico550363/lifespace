@@ -14,6 +14,6 @@ Rails.application.routes.draw do
 #   patch   'pages/:id'        =>  'pages#update'
 #   get     'pages/:id/edit'   =>  'pages#edit'
 #   get     'users/:id'        =>  'users#show'
-  get 'pages/test'  =>  'pages#test'
+  get 'all'  =>  'pages#all'
   get 'search' => 'pages#search'
 end
