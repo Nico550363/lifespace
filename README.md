@@ -5,7 +5,8 @@
 * アドレス: http://3.113.231.107/
 
 * 使い方: 
-1, ヘッダーの右上に新規登録のボタンでアカウント登録する。
+
+1, ヘッダーの右上に新規登録のボタンでアカウント登録する。  
 
 2, ヘッダーの右上の投稿ボタンをクリックする。
 
@@ -15,9 +16,8 @@
 
 その他: マイページ、編集機能、コメント機能がついています。
 
-* : 
 
-This README would normally document whatever steps are necessary to get the
+<!-- This README would normally document whatever steps are necessary to get the
 application up and running.
 
 Things you may want to cover:
@@ -38,7 +38,7 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* ... -->
 
 
 
