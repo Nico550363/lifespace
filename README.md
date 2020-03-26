@@ -13,6 +13,8 @@ haml, sass, javascript, ruby, ruby on rails
 
 ## 使い方
 1. ヘッダーの右上に新規登録のボタンでアカウント登録する。  
+<img width="1439" alt="スクリーンショット 2020-03-26 12 25 14" src="https://user-images.githubusercontent.com/56423832/77607259-16992b80-6f5d-11ea-8119-72b17f7f1a88.png">
+
 
 2. ヘッダーの右上の投稿ボタンをクリックする。
 
