@@ -13,13 +13,14 @@ haml, sass, javascript, ruby, ruby on rails
 
 ## 使い方
 1. ヘッダーの右上に新規登録のボタンでアカウント登録する。  
-https://gyazo.com/997bd5fff9a1ca161fd6a68be2feca9e  
+<img width="1440" alt="スクリーンショット 2020-03-26 13 14 11" src="https://user-images.githubusercontent.com/56423832/77609666-ec973780-6f63-11ea-8347-8bb09037789e.png">  
 <img width="1439" alt="スクリーンショット 2020-03-26 12 25 14" src="https://user-images.githubusercontent.com/56423832/77607259-16992b80-6f5d-11ea-8119-72b17f7f1a88.png">
 
 
 2. ヘッダーの右上の投稿ボタンをクリックする。
 
 3. 投稿ページに名前,ジャンル,説明,画像を入力し、投稿ボタンをクリックする。
+<img width="1440" alt="スクリーンショット 2020-03-26 13 24 00" src="https://user-images.githubusercontent.com/56423832/77610120-2f0d4400-6f65-11ea-81eb-ec81f8a77dfa.png">
 
 4. トップページに投稿作品が拝見できます。  
 
