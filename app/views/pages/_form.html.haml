@@ -16,7 +16,8 @@
           - if @page.image.url.present?
             = image_tag(@page.image.url)
           - else
-            %i.fas.fa-image
+            %i.create-main__sample 
+              クリックしたファイルをアップロード
             %i.fas.fa-file-upload.add
         = f.file_field :image, class: "image", style: "display:none;", id: "file"
       .form-box__button
