@@ -3,12 +3,27 @@
     = f.text_field :search, class:"header-search-form__top", id:"toppage-search", placeholder:"何かお探しですか？"
     = button_tag type: 'submit', class: "header-search-form__btn" do
       = icon 'fas', 'search-minus'
-.header__right
-  - if user_signed_in?
-    = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'button button-clear'
-    = link_to "投稿する", new_page_path, class: 'button button-clear'
-    = link_to "マイページ", "/users/#{current_user.id}", class: 'button button-clear'
-  - else
-    %input.button.button-clear/
-    = link_to "ログイン", new_user_session_path, class: 'button button-clear'
-    = link_to "新規登録", new_user_registration_path, class: 'button button-clear'
+-# .header__right
+-#   - if user_signed_in?
+-#     = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'button button-clear'
+-#     = link_to "投稿する", new_page_path, class: 'button button-clear'
+-#     = link_to "マイページ", "/users/#{current_user.id}", class: 'button button-clear'
+-#   - else
+-#     %input.button.button-clear/
+-#     = link_to "ログイン", new_user_session_path, class: 'button button-clear'
+-#     = link_to "新規登録", new_user_registration_path, class: 'button button-clear'
+
+%nav.header__right
+  %ul.header__nav
+    - if user_signed_in?
+      %li
+        = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'button button-clear'
+      %li
+        = link_to "投稿する", new_page_path, class: 'button button-clear'
+      %li
+        = link_to "マイページ", "/users/#{current_user.id}", class: 'button button-clear'
+    - else
+      %li
+        = link_to "ログイン", new_user_session_path, class: 'button button-clear'
+      %li
+        = link_to "新規登録", new_user_registration_path, class: 'button button-clear'

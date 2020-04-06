@@ -12,14 +12,24 @@
   width: 80%;
   height: 64px;
   margin: auto;
-  &__left{
-    float: left;
-  }
-  &__right{
-    float: right;
-  }
+  display: flex;
+  justify-content: space-between;
+  // &__left{
+  //   float: left;
+  // }
+  // &__right{
+  //   float: right;
+  // }
   &-title{
     text-align: center;
+  }
+  &__nav{
+    display: flex;
+    list-style: none;
+    text-transform: uppercase;
+  }
+  &__nav li{
+    margin-left: 36px;
   }
 }
 
@@ -73,6 +83,13 @@
       width: 25%;
       padding: 10px;
       // margin-right: 5px;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .header{
+    &-title{
+    margin-top: 85px;
     }
   }
 }
