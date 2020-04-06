@@ -10,6 +10,16 @@
   }
   &__table{
     margin-top: 40px;
+    &__name{
+      color: black;
+      font-size: x-large;
+    }
+    &__text{
+      padding: 0.5em 1em;
+      margin: 1em 0;
+      color: #2c2c2f;
+      background: rgb(214, 188, 230);
+    }
   }
 }
 
