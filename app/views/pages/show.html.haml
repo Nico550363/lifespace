@@ -17,13 +17,13 @@
   -#           %td= @page.name
   -#           %td= @page.text
 
-  .contents
-    .contents__table
-      .contents__table__image
+  .main-contents
+    .main-contents__table
+      .main-contents__table__image
         = image_tag @page.image.url
-      .contents__table__name
+      .main-contents__table__name
         = @page.name
-      .contents__table__text
+      .main-contents__table__text
         = @page.text
     .container
     - if current_user
