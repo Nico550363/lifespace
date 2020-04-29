@@ -1,32 +1,3 @@
--# .wrapper
--#   .header
--#     = render "pages/header"
--#   .header-title
--#     = render "pages/header-title"
--#   .contents.mannaka
--#     %em.contents__nickname
--#       = @nickname
--#       さんの投稿一覧
--#     - @pages.each do |page|
--#       .contents__table
--#         %table
--#           %thead
--#             %tr
--#               %th 写真
--#               %th 名前
--#               %th 説明
--#               %th ボタン
--#               %th ボタン
--#           %tbody
--#             %tr
--#               %td= image_tag page.image.url, size: '300x275'
--#               %td= page.name
--#               %td= page.text
--#               %td= link_to '削除', "/pages/#{page.id}", method: :delete, class: 'button button-clear'
--#               %td= link_to '編集', "/pages/#{page.id}/edit", method: :get, class: 'button button-clear'
--#   .footer
--#     = render "pages/footer"
-
 .wrapper
   .header
     = render "pages/header"
